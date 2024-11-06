@@ -18,6 +18,7 @@ export default function Home() {
           width={1600}
           height={0}
           priority
+          className="w-[100%]"
         />
         {/* <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
