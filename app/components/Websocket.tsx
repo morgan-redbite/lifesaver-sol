@@ -49,7 +49,7 @@ const WebsocketPage = () => {
   // console.log(messages);
   const onGetInitialUnloadedData = async () => {
     try {
-      const initialResult = await fetch("https://websocket-master-lifesaver-sol-production-195e.up.railway.app/tokens?limit=20");
+      const initialResult = await fetch("https://websocket-master-lifesaver-sol-production-195e.up.railway.app/tokens?limit=50");
       const initialData = await initialResult.json();
       setMessages(initialData);
     } catch (error) {

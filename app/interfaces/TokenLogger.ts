@@ -42,4 +42,4 @@ interface WebSocketMessage {
   message: Message;
 }
 
-export { WebSocketMessage, Message, Payload, Botter, LinkedAddress };
+export type { WebSocketMessage, Message, Payload, Botter, LinkedAddress };
