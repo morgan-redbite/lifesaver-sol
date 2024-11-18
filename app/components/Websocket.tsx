@@ -9,7 +9,7 @@ import { Modal } from "./Modal";
 import { formatDistanceToNow  } from 'date-fns';
 
 function getRelativeTime(updatedAt: Date) {
-  if (!updatedAt) return "Unknown";
+  if (!updatedAt) return "Few seconds ago";
   return formatDistanceToNow(new Date(updatedAt), { addSuffix: true });
 }
 
