@@ -1,0 +1,15 @@
+.area_style {
+  color: #fff;
+}
+
+.scrollable_div {
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.card_style {
+  background-color: #24252E;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 16px;
+}
