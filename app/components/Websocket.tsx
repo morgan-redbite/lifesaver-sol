@@ -12,7 +12,7 @@ const WebsocketPage = () => {
   const [status, setStatus] = useState("Disconnected");
   
   useEffect(() => {
-    const ws = new WebSocket("ws://websocket-master-lifesaver-sol-production-195e.up.railway.app"); // Replace with your WebSocket URL
+    const ws = new WebSocket("wss://websocket-master-lifesaver-sol-production-195e.up.railway.app"); // Replace with your WebSocket URL
 
     ws.onopen = () => {
       console.log("WebSocket connected");
