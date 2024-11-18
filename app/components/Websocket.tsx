@@ -6,6 +6,12 @@ import React, { useEffect, useState } from "react";
 import { Message, Payload, WebSocketMessage } from "../interfaces/TokenLogger";
 import "./styles.css";
 import { Modal } from "./Modal";
+import { formatDistanceToNow  } from 'date-fns';
+
+function getRelativeTime(updatedAt: Date) {
+  if (!updatedAt) return "Unknown";
+  return formatDistanceToNow(new Date(updatedAt), { addSuffix: true });
+}
 
 const WebsocketPage = () => {
   const [messages, setMessages] = useState<Payload[]>([]);
@@ -143,7 +149,16 @@ const WebsocketPage = () => {
                   <span className="text-gray-300">Mint Authority: <span>{FreezeOrMintAuthority(m.tokenIsMintAuthority)}</span></span>
                 </div>
               </div>
-
+              {/* Divider */}
+              <div
+                style={{
+                  width: "100%",
+                  height: "2px",
+                  backgroundColor: "rgb(250 250 250 / 0.2)",
+                  margin: "0px 0px 0px 0px",
+                }}
+              ></div>
+              <div>Last Created - {getRelativeTime(m.updatedAt)}</div>
               {isModalOpen && indexModalView && <Modal payload={indexModalView}/>}
             </div>
           ))}

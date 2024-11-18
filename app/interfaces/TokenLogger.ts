@@ -30,6 +30,7 @@ interface Payload {
   risk: string;
   tokenFreeAuthority: string;
   tokenIsMintAuthority: string;
+  updatedAt: Date;
 }
 
 interface Message {
